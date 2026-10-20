@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Tierra negra, tierra abonada y productos agrícolas en Bogotá. Consulta presentaciones, precios y disponibilidad."
+  />
+  <meta name="theme-color" content="#183d2b" />
+  
+  <title>Tierra Agrícola Bogotá | Tierra negra y abonada</title>
+  
+  <!-- Estilos y Scripts -->
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Encabezado Principal -->
+  <header class="site-header">
+    <a href="#inicio" class="logo" aria-label="Tierra Agrícola - Ir al inicio">
+      <span class="logo-icon" aria-hidden="true">🌱</span>
+      <span>Tierra <strong>Agrícola</strong></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a class="button button-outline" data-llamar href="tel:+573001234567">
+      Llamar ahora
+    </a>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow">SOLUCIONES PARA TUS CULTIVOS</span>
+        <h1>La tierra ideal para hacer crecer tus proyectos.</h1>
+        <p>
+          Tierra negra, tierra abonada y productos agrícolas
+          para jardines, huertas y cultivos en Bogotá.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#productos">
+            Ver productos
+          </a>
+          <a
+            class="button button-light"
+            data-whatsapp
+            href="https://wa.me/573001234567"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar por WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-benefits">
+          <span>✓ Atención personalizada</span>
+          <span>✓ Consulta de disponibilidad</span>
+          <span>✓ Cotizaciones según cantidad</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="section products-section" id="productos">
+      <div class="section-heading">
+        <span class="eyebrow">NUESTRO CATÁLOGO</span>
+        <h2>Productos para tus proyectos</h2>
+        <p>
+          Cuéntanos qué necesitas y te ayudaremos a elegir
+          la presentación más adecuada.
+        </p>
+      </div>
+
+      <div class="product-grid" id="catalogo">
+        <p>Cargando productos...</p>
+      </div>
+    </section>
+
+    <!-- Sección Nosotros / Información -->
+    <section class="about-section" id="nosotros">
+      <div class="about-content">
+        <span class="eyebrow">TIERRA Y CULTIVO</span>
+        <h2>La solución para tus necesidades agrícolas</h2>
+        <p>
+          Ofrecemos productos para jardinería, huertas y proyectos
+          agrícolas. Contáctanos para consultar precios, cantidades,
+          disponibilidad y opciones de entrega en Bogotá.
+        </p>
+        <a class="button button-primary" href="#contacto">
+          Solicitar cotización
+        </a>
+      </div>
+    </section>
+
+    <!-- Sección Contacto y Formulario -->
+    <section class="section contact-section" id="contacto">
+      <div class="section-heading">
+        <span class="eyebrow">ESTAMOS PARA AYUDARTE</span>
+        <h2>Solicita tu cotización</h2>
+        <p>
+          Déjanos tus datos y nos pondremos en contacto contigo.
+        </p>
+      </div>
+
+      <form id="formulario-contacto" class="contact-form">
+        <div class="form-group">
+          <label for="nombre">Nombre completo *</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            autocomplete="name"
+            maxlength="100"
+            required
+            placeholder="Tu nombre"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono o celular *</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            autocomplete="tel"
+            maxlength="25"
+            required
+            placeholder="Ej. 300 123 4567"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="producto">Producto de interés *</label>
+          <select id="producto" name="producto" required>
+            <option value="">Selecciona un producto</option>
+            <option value="Tierra negra">Tierra negra</option>
+            <option value="Tierra abonada">Tierra abonada</option>
+            <option value="Sustrato para plantas">Sustrato para plantas</option>
+            <option value="Otro producto">Otro producto</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cantidad">Cantidad aproximada</label>
+          <input
+            type="text"
+            id="cantidad"
+            name="cantidad"
+            maxlength="100"
+            placeholder="Ej. 10 bultos o 2 metros cúbicos"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="localidad">Localidad o zona de entrega</label>
+          <input
+            type="text"
+            id="localidad"
+            name="localidad"
+            maxlength="100"
+            placeholder="Ej. Suba, Engativá, Chía..."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Información adicional</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            maxlength="1000"
+            placeholder="Cuéntanos qué necesitas"
+          ></textarea>
+        </div>
+
+        <div class="privacy-consent">
+          <input
+            type="checkbox"
+            id="aceptaDatos"
+            name="aceptaDatos"
+            required
+          />
+          <label for="aceptaDatos">
+            Autorizo el tratamiento de mis datos personales para
+            gestionar esta solicitud y recibir contacto comercial,
+            conforme a la <a href="/privacidad.html" target="_blank">política de privacidad</a>.
+          </label>
+        </div>
+
+        <button class="button button-primary button-full" type="submit">
+          Enviar solicitud
+        </button>
+
+        <p
+          id="estado-formulario"
+          class="form-status"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+
+      <div class="direct-contact">
+        <p>¿Prefieres hablar directamente con nosotros?</p>
+        <a class="button button-outline" data-llamar href="tel:+573001234567">
+          📞 Llamar al asesor
+        </a>
+        <a
+          class="button button-whatsapp"
+          data-whatsapp
+          href="https://wa.me/573001234567"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <a href="#inicio" class="logo">
+      🌱 Tierra <strong>Agrícola</strong>
+    </a>
+    <p>Productos agrícolas en Bogotá, Colombia.</p>
+    <p>
+      <a href="/privacidad.html">Política de privacidad</a>
+    </p>
+    <small>
+      © <span id="anio">2026</span> Tierra Agrícola. Todos los derechos reservados.
+    </small>
+  </footer>
+
+  <script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
