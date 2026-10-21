@@ -5,24 +5,12 @@
   "private": true,
   "description": "Catálogo de productos agrícolas en Bogotá",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'Proyecto estático sin compilación necesaria'",
-    "start": "vercel dev"
+    "build": ""
   },
-      "engines": {
-  "node": "22.x"
-}
+  "engines": {
+    "node": "22.x"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.0"
-  },
-  "keywords": [
-    "tierra-negra",
-    "tierra-abonada",
-    "sustratos",
-    "agricola",
-    "bogota"
-  ],
-  "author": "",
-  "license": "MIT"
+  }
 }
