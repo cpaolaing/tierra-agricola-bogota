@@ -9,8 +9,9 @@
     "build": "echo 'Proyecto estático sin compilación necesaria'",
     "start": "vercel dev"
   },
-  "engines": {
-    "node": ">=22.0.0"
+      "engines": {
+  "node": "22.x"
+}
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.0"
