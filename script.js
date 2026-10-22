@@ -8,7 +8,7 @@ const productos = [
     descripcion: "Ideal para jardines, zonas verdes y preparación del terreno.",
     precio: 500 COP,
     unidad: "Kilo: \$500 COP | 25 kg: \$12.500 COP | 50 kg: \$25.000 COP. También disponible en metro cúbico, viajes u otras presentaciones (Valor según cotización y mercado). *No incluye transporte.",
-    imagen: "https://unsplash.com"
+    imagen: "https://media.istockphoto.com/id/91836571/es/foto/tierra-negra-entrega-cami%C3%B3n-de-descarga-para-emplazamientos-residenciales-paisaje.webp?a=1&b=1&s=612x612&w=0&k=20&c=g8GNxU9vK_EQG8RsAvOyJTfG5fhqRhOZsETPLj7Sk28="
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const productos = [
     descripcion: "Para huertas, materas, jardines y cultivos.",
     precio: 800 COP,
     unidad: "Kilo: \$800 COP | 25 kg: \$20.000 COP | 50 kg: \$40.000 COP. *No incluye transporte.",
-    imagen: "https://unsplash.com"
+    imagen: "https://images.unsplash.com/photo-1693414853994-1080baaacb4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const productos = [
     descripcion: "Abono orgánico ideal para aportar nutrientes y apoyar el crecimiento de plantas y cultivos.",
     precio: 1000 COP,
     unidad: "Venta exclusiva por Kilo. *No incluye transporte.",
-    imagen: "https://unsplash.com"
+    imagen: "https://plus.unsplash.com/premium_photo-1664527009212-73e907133b02?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
   }
 ];
 
@@ -138,11 +138,18 @@ function configurarFormulario() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+// Inicialización garantizada
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    crearTarjetasProductos();
+    configurarContacto();
+    configurarFormulario();
+  });
+} else {
   crearTarjetasProductos();
   configurarContacto();
   configurarFormulario();
-});
+}
   crearTarjetasProductos();
   configurarContacto();
   configurarFormulario();
