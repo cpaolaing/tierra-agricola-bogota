@@ -23,8 +23,8 @@ const productos = [
   },
   {
     id: 3,
-    nombre: "Sustrato para plantas",
-    descripcion: "Mezcla para apoyar el crecimiento de plantas y cultivos.",
+    nombre: "Gallinaza",
+    descripcion: "Sustancia rica en aportes nutricionales a las plantas.",
     precio: null,
     unidad: "Consultar presentación",
     imagen: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=85"
@@ -170,4 +170,26 @@ document.addEventListener("DOMContentLoaded", () => {
   crearTarjetasProductos();
   configurarContacto();
   configurarFormulario();
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const botonesCotizar = document.querySelectorAll('.seleccionar-producto');
+  
+  botonesCotizar.forEach(boton => {
+    boton.addEventListener('click', (e) => {
+      const productoSeleccionado = e.target.getAttribute('data-producto');
+      
+      // Busca el campo de producto en tu formulario (ajusta el ID según tu HTML, ej: 'producto')
+      const inputProducto = document.getElementById('producto') || document.querySelector('select[name="producto"]');
+      
+      if (inputProducto) {
+        inputProducto.value = productoSeleccionado;
+      }
+      
+      // Hace desplazamiento suave hacia la sección de contacto
+      const seccionContacto = document.getElementById('contacto');
+      if (seccionContacto) {
+        seccionContacto.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 });
