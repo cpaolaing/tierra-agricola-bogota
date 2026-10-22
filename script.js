@@ -163,33 +163,93 @@ function configurarFormulario() {
   });
 }
 
-// ==========================================
-// INICIALIZACIÓN
-// ==========================================
-document.addEventListener("DOMContentLoaded", () => {
-  crearTarjetasProductos();
-  configurarContacto();
-  configurarFormulario();
-});
-document.addEventListener('DOMContentLoaded', () => {
-  const botonesCotizar = document.querySelectorAll('.seleccionar-producto');
-  
-  botonesCotizar.forEach(boton => {
-    boton.addEventListener('click', (e) => {
-      const productoSeleccionado = e.target.getAttribute('data-producto');
-      
-      // Busca el campo de producto en tu formulario (ajusta el ID según tu HTML, ej: 'producto')
-      const inputProducto = document.getElementById('producto') || document.querySelector('select[name="producto"]');
-      
-      if (inputProducto) {
-        inputProducto.value = productoSeleccionado;
+ <!-- SCRIPT PARA RENDERIZAR LOS PRODUCTOS EN CUADRÍCULA -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Base de datos de productos con precios y presentaciones
+      const productos = [
+        {
+          id: 1,
+          nombre: "Tierra negra",
+          descripcion: "Ideal para jardines, zonas verdes y preparación del terreno con excelente retención de humedad.",
+          imagen: "https://unsplash.com",
+          precios: [
+            { etiqueta: "Kilo", valor: "\$500 COP" },
+            { etiqueta: "Bulto 25 kg", valor: "\$12,500 COP" },
+            { etiqueta: "Bulto 50 kg", valor: "\$25,000 COP" }
+          ],
+          notaAdicional: "Metro cúbico / Viajes: A cotizar según mercado."
+        },
+        {
+          id: 2,
+          nombre: "Tierra abonada",
+          descripcion: "Mezcla enriquecida con nutrientes esenciales para acelerar el crecimiento de tus plantas.",
+          imagen: "https://unsplash.com",
+          precios: [
+            { etiqueta: "Kilo", valor: "\$800 COP" },
+            { etiqueta: "Bulto 25 kg", valor: "\$20,000 COP" },
+            { etiqueta: "Bulto 50 kg", valor: "\$40,000 COP" }
+          ],
+          notaAdicional: "Metro cúbico / Viajes: A cotizar según mercado."
+        },
+        {
+          id: 3,
+          nombre: "Gallinaza",
+          descripcion: "Abono orgánico natural de alto rendimiento para mejorar la fertilidad de suelos agrícolas.",
+          imagen: "https://unsplash.com",
+          precios: [
+            { etiqueta: "Kilo", valor: "\$1,000 COP" }
+          ],
+          notaAdicional: "Venta exclusiva por kilo."
+        }
+      ];
+
+      // 2. Función para inyectar las tarjetas en el contenedor #catalogo
+      function crearTarjetasProductos() {
+        const catalogo = document.getElementById("catalogo");
+        if (!catalogo) return;
+
+        catalogo.innerHTML = productos
+          .map((producto) => {
+            const listaPreciosHTML = producto.precios
+              .map(p => `<li><strong>${p.etiqueta}:</strong> ${p.valor}</li>`)
+              .join("");
+
+            const notaHTML = producto.notaAdicional 
+              ? `<li class="mt-1 text-muted"><em>${producto.notaAdicional}</em></li>` 
+              : "";
+
+            return `
+              <div class="col-12 col-md-6 col-lg-4 d-flex">
+                <article class="card w-100 shadow-sm border border-success border-opacity-25 rounded-4 overflow-hidden text-center mx-auto" style="max-width: 340px;">
+                  <div class="overflow-hidden" style="height: 180px;">
+                    <img src="${producto.imagen}" alt="${producto.nombre}" class="w-100 h-100 object-fit-cover" loading="lazy" />
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <h3 class="card-title h5 fw-bold text-success mb-2">${producto.nombre}</h3>
+                    <p class="card-text text-secondary small mb-3">${producto.descripcion}</p>
+                    
+                    <div class="bg-light p-3 rounded-3 mb-3 mt-auto border">
+                      <ul class="list-unstyled mb-0 small text-start">
+                        ${listaPreciosHTML}
+                        ${notaHTML}
+                      </ul>
+                    </div>
+
+                    <button class="btn btn-success w-100 seleccionar-producto" type="button" data-producto="${producto.nombre}">
+                      Cotizar / Comprar
+                    </button>
+                  </div>
+                </article>
+              </div>
+            `;
+          })
+          .join("");
       }
-      
-      // Hace desplazamiento suave hacia la sección de contacto
-      const seccionContacto = document.getElementById('contacto');
-      if (seccionContacto) {
-        seccionContacto.scrollIntoView({ behavior: 'smooth' });
-      }
+
+      // Ejecutar la función al cargar la página
+      crearTarjetasProductos();
     });
-  });
-});
+  </script>
+</body>
+</html>
