@@ -234,9 +234,11 @@ textarea {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: 32px; /* Espaciado más amplio y limpio entre tarjetas */
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .product-card {
@@ -246,7 +248,10 @@ textarea {
   background-color: var(--white);
   border: 1px solid var(--border);
   border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%; /* Obliga a la tarjeta a usar el espacio completo de su columna */
+  height: 100%; /* Mantiene las tarjetas alineadas si tienen textos largos */
 }
 
 .product-card:hover {
@@ -256,9 +261,10 @@ textarea {
 
 .product-card > img {
   width: 100%;
-  height: 230px;
-  object-fit: cover;
+  height: 250px; /* Altura fija para que todas las fotos queden perfectamente simétricas */
+  object-fit: cover; /* Evita que las imágenes se distorsionen o aplasten */
   background-color: var(--cream);
+  display: block;
 }
 
 .product-info {
@@ -267,6 +273,7 @@ textarea {
   flex-direction: column;
   align-items: flex-start;
   padding: 24px;
+  background-color: var(--white); /* Asegura que el fondo del texto tape la imagen */
 }
 
 .product-tag {
@@ -276,10 +283,11 @@ textarea {
   border-radius: 20px;
   font-size: 11px;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .product-info h3 {
-  margin: 14px 0 8px;
+  margin: 8px 0;
   color: var(--green);
   font-size: 22px;
 }
@@ -288,38 +296,44 @@ textarea {
   flex: 1;
   color: var(--muted);
   font-size: 14px;
+  margin: 0 0 16px 0;
 }
 
 .product-info strong {
-  margin: 8px 0;
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 6px;
+  display: block;
 }
 
 .product-info small {
-  margin-bottom: 18px;
+  display: block;
+  margin-bottom: 20px;
   color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 .product-info .button {
   width: 100%;
+  margin-top: auto; /* Empuja el botón siempre hacia abajo al mismo nivel */
 }
 
 /* ==========================================
-   SECCIÓN NOSOTROS (ABOUT)
+   MEDIA QUERIES ACTUALIZADAS (RESPONSIVE)
    ========================================== */
-.about-section {
-  padding: 85px 8%;
-  background-color: var(--cream);
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 20px 4%;
+  }
 }
 
-.about-content {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-content p {
-  margin: 20px 0 28px;
-  color: var(--muted);
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 20px 6%;
+  }
 }
 
 /* ==========================================
