@@ -467,82 +467,11 @@ textarea {
 
 /* Móvil (hasta 560px) */
 @media (max-width: 560px) {
-  .site-header {
-    padding: 12px 4%;
-  }
-
-  .logo {
-    font-size: 16px;
-  }
-
-  .site-header > .button {
-    min-height: 40px;
-    padding: 8px 12px;
-    font-size: 13px;
-  }
-
-  .main-nav {
-    gap: 18px;
-  }
-
-  .main-nav a {
-    font-size: 12px;
-  }
-
-  .hero {
-    min-height: 570px;
-    padding: 55px 6%;
-  }
-
-  .hero h1 {
-    font-size: 39px;
-  }
-
-  .hero-content > p {
-    font-size: 16px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero-benefits {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .section {
-    padding: 60px 5%;
-  }
-
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-
-  .product-card > img {
-    height: 240px;
-  }
-
-  .contact-form {
-    padding: 22px 16px;
-  }
-
-  .direct-contact {
-    flex-direction: column;
-  }
-
-  .direct-contact .button {
+  
+  .hero-actions .button {
     width: 100%;
-  }
-}
-
-/* Accesibilidad: Movimiento reducido */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition: none !important;
   }
 }
