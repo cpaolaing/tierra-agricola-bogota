@@ -3,65 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Tierra negra, tierra abonada y productos agrícolas en Bogotá. Consulta presentaciones, precios y disponibilidad."
-  />
+  <meta name="description" content="Tierra negra, tierra abonada y productos agrícolas en Bogotá. Consulta presentaciones, precios y disponibilidad." />
   <meta name="theme-color" content="#183d2b" />
-  
   <title>Tierra Agrícola Bogotá | Tierra negra y abonada</title>
-  
-  <!-- Estilos y Scripts -->
   <link rel="stylesheet" href="/styles.css" />
   <script src="/script.js" defer></script>
 </head>
 <body>
 
-  <!-- Encabezado Principal -->
   <header class="site-header">
     <a href="#inicio" class="logo" aria-label="Tierra Agrícola - Ir al inicio">
       <span class="logo-icon" aria-hidden="true">🌱</span>
       <span>Tierra <strong>Agrícola</strong></span>
     </a>
-
     <nav class="main-nav" aria-label="Navegación principal">
       <a href="#productos">Productos</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
-
-    <a class="button button-outline" data-llamar href="tel:+573001234567">
-      Llamar ahora
-    </a>
+    <a class="button button-outline" data-llamar href="tel:+573001234567">Llamar ahora</a>
   </header>
 
-  <!-- Contenido Principal -->
   <main>
     <!-- Hero Section -->
     <section class="hero" id="inicio">
       <div class="hero-content">
         <span class="eyebrow">SOLUCIONES PARA TUS CULTIVOS</span>
         <h1>La tierra ideal para hacer crecer tus proyectos.</h1>
-        <p>
-          Tierra negra, tierra abonada y productos agrícolas
-          para jardines, huertas y cultivos en Bogotá.
-        </p>
-
+        <p>Tierra negra, tierra abonada y productos agrícolas para jardines, huertas y cultivos en Bogotá.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#productos">
-            Ver productos
-          </a>
-          <a
-            class="button button-light"
-            data-whatsapp
-            href="https://wa.me/573001234567"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Consultar por WhatsApp
-          </a>
+          <a class="button button-primary" href="#productos">Ver productos</a>
+          <a class="button button-light" data-whatsapp href="https://wa.me" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
         </div>
-
         <div class="hero-benefits">
           <span>✓ Atención personalizada</span>
           <span>✓ Consulta de disponibilidad</span>
@@ -70,104 +43,26 @@
       </div>
     </section>
 
-   <!-- SECCIÓN DE PRODUCTOS Y PRECIOS -->
-<section id="productos" class="py-5 bg-light">
-  <div class="container" style="max-width: 1100px;">
-    
-    <!-- Encabezado del Catálogo -->
-    <div class="text-center mb-5">
-      <span class="d-block text-uppercase tracking-wider small fw-bold text-success mb-2">Nuestro Catálogo</span>
-      <h2 class="fw-bold text-success">Productos para tus proyectos</h2>
-      <p class="text-muted mx-auto" style="max-width: 600px;">
-        Tierra y abonos de alta calidad para tus cultivos, jardines y huertas en Bogotá. Cuéntanos qué necesitas y te ayudaremos a elegir la presentación más adecuada.
-      </p>
-      <small class="d-block text-danger fw-semibold mt-3">* Nota: Las ventas no incluyen el costo del transporte en ninguna de nuestras presentaciones.</small>
-    </div>
-
-    <!-- Grid de Tarjetas de Productos -->
-    <div class="row g-4 justify-content-center align-items-stretch" id="catalogo">
-      
-      <!-- Producto 1: Tierra Negra -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card w-100 shadow-sm border border-success border-opacity-25 rounded-4 overflow-hidden text-center mx-auto" style="max-width: 340px;">
-          <div class="overflow-hidden" style="height: 180px;">
-            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Tierra Negra">
-          </div>
-          <div class="card-body d-flex flex-column p-4">
-            <h3 class="card-title h5 fw-bold text-success mb-2">Tierra Negra</h3>
-            <p class="card-text text-secondary small mb-3">Ideal para jardines, huertas y relleno de áreas verdes con excelente retención de humedad.</p>
-            <div class="bg-light p-3 rounded-3 mb-3 mt-auto border">
-              <ul class="list-unstyled mb-0 small text-start">
-                <li><strong>Kilo:</strong> $500 COP</li>
-                <li><strong>Bulto 25 kg:</strong> $12,500 COP</li>
-                <li><strong>Bulto 50 kg:</strong> $25,000 COP</li>
-                <li class="mt-1 text-muted"><em>Metro cúbico / Viajes: A cotizar según mercado.</em></li>
-              </ul>
-            </div>
-            <button class="btn btn-success w-100 seleccionar-producto" data-producto="Tierra Negra">Cotizar / Comprar</button>
-          </div>
-        </div>
+    <!-- Catálogo de Productos -->
+    <section class="section products-section" id="productos">
+      <div class="section-heading">
+        <span class="eyebrow">NUESTRO CATÁLOGO</span>
+        <h2>Productos para tus proyectos</h2>
+        <p>Cuéntanos qué necesitas y te ayudaremos a elegir la presentación más adecuada.</p>
       </div>
-
-      <!-- Producto 2: Tierra Abonada -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card w-100 shadow-sm border border-success border-opacity-25 rounded-4 overflow-hidden text-center mx-auto" style="max-width: 340px;">
-          <div class="overflow-hidden" style="height: 180px;">
-            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Tierra Abonada">
-          </div>
-          <div class="card-body d-flex flex-column p-4">
-            <h3 class="card-title h5 fw-bold text-success mb-2">Tierra Abonada</h3>
-            <p class="card-text text-secondary small mb-3">Mezcla enriquecida con nutrientes esenciales para acelerar el crecimiento de tus plantas.</p>
-            <div class="bg-light p-3 rounded-3 mb-3 mt-auto border">
-              <ul class="list-unstyled mb-0 small text-start">
-                <li><strong>Kilo:</strong> $800 COP</li>
-                <li><strong>Bulto 25 kg:</strong> $20,000 COP</li>
-                <li><strong>Bulto 50 kg:</strong> $40,000 COP</li>
-                <li class="mt-1 text-muted"><em>Metro cúbico / Viajes: A cotizar según mercado.</em></li>
-              </ul>
-            </div>
-            <button class="btn btn-success w-100 seleccionar-producto" data-producto="Tierra Abonada">Cotizar / Comprar</button>
-          </div>
-        </div>
+      <!-- Este contenedor recibirá las tarjetas de forma correcta -->
+      <div class="product-grid" id="catalogo">
+        <p>Cargando productos...</p>
       </div>
+    </section>
 
-      <!-- Producto 3: Gallinaza -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card w-100 shadow-sm border border-success border-opacity-25 rounded-4 overflow-hidden text-center mx-auto" style="max-width: 340px;">
-          <div class="overflow-hidden" style="height: 180px;">
-            <img src="https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80" class="card-img-top w-100 h-100 object-fit-cover" alt="Gallinaza">
-          </div>
-          <div class="card-body d-flex flex-column p-4">
-            <h3 class="card-title h5 fw-bold text-success mb-2">Gallinaza</h3>
-            <p class="card-text text-secondary small mb-3">Abono orgánico natural de alto rendimiento para mejorar la fertilidad de suelos agrícolas.</p>
-            <div class="bg-light p-3 rounded-3 mb-3 mt-auto border">
-              <ul class="list-unstyled mb-0 small text-start">
-                <li><strong>Kilo:</strong> $1,000 COP</li>
-                <li class="mt-1 text-muted"><em>Venta exclusiva por kilo.</em></li>
-              </ul>
-            </div>
-            <button class="btn btn-success w-100 seleccionar-producto" data-producto="Gallinaza">Cotizar / Comprar</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <!-- Sección Nosotros / Información -->
+    <!-- Sección Nosotros -->
     <section class="about-section" id="nosotros">
       <div class="about-content">
         <span class="eyebrow">TIERRA Y CULTIVO</span>
         <h2>La solución para tus necesidades agrícolas</h2>
-        <p>
-          Ofrecemos productos para jardinería, huertas y proyectos
-          agrícolas. Contáctanos para consultar precios, cantidades,
-          disponibilidad y opciones de entrega en Bogotá.
-        </p>
-        <a class="button button-primary" href="#contacto">
-          Solicitar cotización
-        </a>
+        <p>Ofrecemos productos para jardinería, huertas y proyectos agrícolas. Contáctanos para consultar precios, cantidades, disponibilidad y opciones de entrega en Bogotá.</p>
+        <a class="button button-primary" href="#contacto">Solicitar cotización</a>
       </div>
     </section>
 
@@ -176,138 +71,63 @@
       <div class="section-heading">
         <span class="eyebrow">ESTAMOS PARA AYUDARTE</span>
         <h2>Solicita tu cotización</h2>
-        <p>
-          Déjanos tus datos y nos pondremos en contacto contigo.
-        </p>
+        <p>Déjanos tus datos y nos pondremos en contacto contigo.</p>
       </div>
 
       <form id="formulario-contacto" class="contact-form">
         <div class="form-group">
           <label for="nombre">Nombre completo *</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            autocomplete="name"
-            maxlength="100"
-            required
-            placeholder="Tu nombre"
-          />
+          <input type="text" id="nombre" name="nombre" autocomplete="name" maxlength="100" required placeholder="Tu nombre" />
         </div>
-
         <div class="form-group">
           <label for="telefono">Teléfono o celular *</label>
-          <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            autocomplete="tel"
-            maxlength="25"
-            required
-            placeholder="Ej. 300 123 4567"
-          />
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel" maxlength="25" required placeholder="Ej. 300 123 4567" />
         </div>
-
-  <div class="form-group">
-  <label for="producto">Producto de interés *</label>
-  <select id="producto" name="producto" required>
-    <option value="">Selecciona un producto</option>
-    <option value="Tierra negra">Tierra negra</option>
-    <option value="Tierra abonada">Tierra abonada</option>
-    <option value="Gallinaza">Gallinaza</option>
-    <option value="Otro producto">Otro producto</option>
-  </select>
-</div>
-        
+        <div class="form-group">
+          <label for="producto">Producto de interés *</label>
+          <select id="producto" name="producto" required>
+            <option value="">Selecciona un producto</option>
+            <option value="Tierra negra">Tierra negra</option>
+            <option value="Tierra abonada">Tierra abonada</option>
+            <option value="Gallinaza">Gallinaza</option>
+            <option value="Otro producto">Otro producto</option>
+          </select>
+        </div>
         <div class="form-group">
           <label for="cantidad">Cantidad aproximada</label>
-          <input
-            type="text"
-            id="cantidad"
-            name="cantidad"
-            maxlength="100"
-            placeholder="Ej. 10 bultos o 2 metros cúbicos"
-          />
+          <input type="text" id="cantidad" name="cantidad" maxlength="100" placeholder="Ej. 10 bultos o 2 metros cúbicos" />
         </div>
-
         <div class="form-group">
           <label for="localidad">Localidad o zona de entrega</label>
-          <input
-            type="text"
-            id="localidad"
-            name="localidad"
-            maxlength="100"
-            placeholder="Ej. Suba, Engativá, Chía..."
-          />
+          <input type="text" id="localidad" name="localidad" maxlength="100" placeholder="Ej. Suba, Engativá, Chía..." />
         </div>
-
         <div class="form-group">
           <label for="mensaje">Información adicional</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="4"
-            maxlength="1000"
-            placeholder="Cuéntanos qué necesitas"
-          ></textarea>
+          <textarea id="mensaje" name="mensaje" rows="4" maxlength="1000" placeholder="Cuéntanos qué necesitas"></textarea>
         </div>
-
         <div class="privacy-consent">
-          <input
-            type="checkbox"
-            id="aceptaDatos"
-            name="aceptaDatos"
-            required
-          />
+          <input type="checkbox" id="aceptaDatos" name="aceptaDatos" required />
           <label for="aceptaDatos">
-            Autorizo el tratamiento de mis datos personales para
-            gestionar esta solicitud y recibir contacto comercial,
-            conforme a la <a href="/privacidad.html" target="_blank">política de privacidad</a>.
+            Autorizo el tratamiento de mis datos personales para gestionar esta solicitud y recibir contacto comercial, conforme a la <a href="/privacidad.html" target="_blank">política de privacidad</a>.
           </label>
         </div>
-
-        <button class="button button-primary button-full" type="submit">
-          Enviar solicitud
-        </button>
-
-        <p
-          id="estado-formulario"
-          class="form-status"
-          role="status"
-          aria-live="polite"
-        ></p>
+        <button class="button button-primary button-full" type="submit">Enviar solicitud</button>
+        <p id="estado-formulario" class="form-status" role="status" aria-live="polite"></p>
       </form>
 
       <div class="direct-contact">
         <p>¿Prefieres hablar directamente con nosotros?</p>
-        <a class="button button-outline" data-llamar href="tel:+573156535855">
-          📞 Llamar al asesor
-        </a>
-        <a
-          class="button button-whatsapp"
-          data-whatsapp
-          href="https://wa.me/573156535855"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Consultar por WhatsApp
-        </a>
+        <a class="button button-outline" data-llamar href="tel:+573001234567"><span aria-hidden="true">📞</span> Llamar al asesor</a>
+        <a class="button button-whatsapp" data-whatsapp href="https://wa.me" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
       </div>
     </section>
   </main>
 
-  <!-- Pie de página -->
   <footer class="site-footer">
-    <a href="#inicio" class="logo">
-      🌱 Tierra <strong>Agrícola</strong>
-    </a>
+    <a href="#inicio" class="logo"><span aria-hidden="true">🌱</span> Tierra <strong>Agrícola</strong></a>
     <p>Productos agrícolas en Bogotá, Colombia.</p>
-    <p>
-      <a href="/privacidad.html">Política de privacidad</a>
-    </p>
-    <small>
-      © <span id="anio">2026</span> Tierra Agrícola. Todos los derechos reservados.
-    </small>
+    <p><a href="/privacidad.html">Política de privacidad</a></p>
+    <small>© <span id="anio">2026</span> Tierra Agrícola. Todos los derechos reservados.</small>
   </footer>
 
   <script>
