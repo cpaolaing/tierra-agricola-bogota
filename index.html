@@ -71,20 +71,64 @@
     </section>
 
     <!-- Catálogo de Productos -->
-    <section class="section products-section" id="productos">
-      <div class="section-heading">
-        <span class="eyebrow">NUESTRO CATÁLOGO</span>
-        <h2>Productos para tus proyectos</h2>
-        <p>
-          Cuéntanos qué necesitas y te ayudaremos a elegir
-          la presentación más adecuada.
-        </p>
+    <!-- SECCIÓN DE PRODUCTOS Y PRECIOS -->
+<section id="productos" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Nuestros Productos Agrícolas</h2>
+    <p class="text-center text-muted mb-5">Venta por kilo, bultos y presentaciones especiales para Bogotá y alrededores. *(Nota: El valor del transporte no está incluido).*</p>
+    
+    <div class="row">
+      <!-- Producto 1: Tierra Negra -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title h5 text-success">Tierra Negra</h3>
+            <p class="card-text">Ideal para jardines, huertas y relleno de áreas verdes.</p>
+            <ul class="list-unstyled mb-4">
+              <li><strong>Por kilo:</strong> $500 COP</li>
+              <li><strong>Bulto 25 kg:</strong> $12,500 COP</li>
+              <li><strong>Bulto 50 kg:</strong> $25,000 COP</li>
+              <li><small class="text-muted">Metro cúbico / Viajes: A cotizar según mercado y transporte.</small></li>
+            </ul>
+            <button class="btn btn-outline-success w-100 seleccionar-producto" data-producto="Tierra Negra">Cotizar / Comprar</button>
+          </div>
+        </div>
       </div>
 
-      <div class="product-grid" id="catalogo">
-        <p>Cargando productos...</p>
+      <!-- Producto 2: Tierra Abonada -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title h5 text-success">Tierra Abonada</h3>
+            <p class="card-text">Rica en nutrientes, excelente para dar mayor fertilidad a tus cultivos.</p>
+            <ul class="list-unstyled mb-4">
+              <li><strong>Por kilo:</strong> $800 COP</li>
+              <li><strong>Bulto 25 kg:</strong> $20,000 COP</li>
+              <li><strong>Bulto 50 kg:</strong> $40,000 COP</li>
+              <li><small class="text-muted">Metro cúbico / Viajes: A cotizar según mercado y transporte.</small></li>
+            </ul>
+            <button class="btn btn-outline-success w-100 seleccionar-producto" data-producto="Tierra Abonada">Cotizar / Comprar</button>
+          </div>
+        </div>
       </div>
-    </section>
+
+      <!-- Producto 3: Gallinaza -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title h5 text-success">Gallinaza</h3>
+            <p class="card-text">Abono orgánico concentrado para potenciar el rendimiento de la tierra.</p>
+            <ul class="list-unstyled mb-4">
+              <li><strong>Por kilo:</strong> $1,000 COP</li>
+              <li><small class="text-muted">Venta exclusiva por kilo. Transporte no incluido.</small></li>
+            </ul>
+            <button class="btn btn-outline-success w-100 seleccionar-producto" data-producto="Gallinaza">Cotizar / Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Sección Nosotros / Información -->
     <section class="about-section" id="nosotros">
@@ -211,13 +255,13 @@
 
       <div class="direct-contact">
         <p>¿Prefieres hablar directamente con nosotros?</p>
-        <a class="button button-outline" data-llamar href="tel:+573001234567">
+        <a class="button button-outline" data-llamar href="tel:+573156535855">
           📞 Llamar al asesor
         </a>
         <a
           class="button button-whatsapp"
           data-whatsapp
-          href="https://wa.me/573001234567"
+          href="https://wa.me/573156535855"
           target="_blank"
           rel="noopener noreferrer"
         >
